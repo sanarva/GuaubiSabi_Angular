@@ -1,0 +1,84 @@
+footer {
+    font-size: .9rem;
+/*  position: -webkit-sticky; 
+    position: sticky;
+    z-index: -100; */
+    bottom: 0px;
+    width: 100%;
+     
+}
+
+.social,
+.copyright {
+    background-color:rgb(205,184,3);
+    padding: 1%;
+}
+
+.social {
+    text-align: center; 
+}
+
+.social a {
+    color: rgba(0,0,0);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+ 
+#iconIG:hover {
+    color: rgba(0,0,0,0.5); 
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); 
+    border-radius: 2px;
+    transition: color .2s; 
+} 
+
+#iconFb1:hover,
+#iconFb2:hover {
+    color: #3b5998;
+    transition: color .2s;
+}
+
+.information {
+    background-color: rgba(0,0,0,0.9);
+} 
+
+.information p {
+    color: rgb(255,255,255);
+    margin-left: 1rem;
+}
+
+.information a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%; 
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size .5s;
+}
+
+.information a:hover { 
+    background-size: 100% 1px;
+}
+
+.information fa-icon {
+    color:white;
+}
+
+.link {
+    margin-left: 1rem;
+}
+
+.info {
+    padding:1%;
+}
+
+@media (max-width: 991px) { 
+    .infoGuaubi, 
+    .infoCompra{
+        border-bottom: rgba(205,184,3, 0.4) solid 1px;
+    }
+} 
+
+p {
+    padding-bottom:0;
+}

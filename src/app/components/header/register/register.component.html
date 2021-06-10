@@ -1,0 +1,152 @@
+<section class="container-fluid">
+    <div class=" d-flex flex-row justify-content-center">
+        <p class="col-10 col-md-8 pl-1 text-justify">¿Todavía no tienes una cuenta? Regístrate y benefíciate de exclusivos descuentos.</p>
+    </div>
+
+    <div class=" d-flex flex-row justify-content-center">
+        <p class="col-10 col-md-8 pl-1 text-justify">Y si eres protectora y quieres formar parte de la familia Guaubi Sabi, date de alta para que puedas se escogida como prote a quien realizar la donación durante el proceso de compra de los productos solidarios.</p>
+    </div>
+    
+    <form autocomplete="off" class ="d-flex flex-column" [formGroup]= "formRegister" (ngSubmit)="enviar()">
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8" >
+                <input class="form-control"
+                       type="text"
+                       placeholder="Correo electrónico"
+                       formControlName="mail"
+                       [class.is-invalid]="invalidMail"
+                >
+                <small *ngIf="invalidMail" class="text-danger">
+                    Ingrese un email válido
+                </small>
+            </div>
+        </div>
+
+        <div class="form-row  justify-content-center mb-3">
+            <div class="col-5 col-md-4">
+                <div class="psw">
+                    <input class="form-control"
+                        type="password"
+                        placeholder="Contraseña"
+                        id="psw1"
+                        formControlName="password1"
+                        [class.is-invalid]="invalidPassword1"
+                    >
+                    <fa-icon [icon]="activeIcon"  size="md" [fixedWidth]="true" id="icon1" class="icon icon1"></fa-icon>
+                </div>
+                <small *ngIf="invalidPassword1" class="text-danger"> 
+                    Contraseña mínima de 8 caracteres
+                </small>
+            </div>
+  
+            <div class="col-5 col-md-4">
+                <div class="psw">
+                    <input 
+                        class="form-control"
+                        type="password"
+                        id="psw2" 
+                        placeholder="Repita la contraseña"
+                        formControlName="password2"
+                        [class.is-invalid]="invalidPassword2"
+                    >
+                    <fa-icon [icon]="activeIcon" size="md" [fixedWidth]="true" id="icon2" class="icon icon2"></fa-icon> 
+                </div>
+                <small *ngIf="invalidPassword2" class="text-danger">
+                    Las contraseñas deben coincidir
+                </small>
+            </div>
+        </div>
+  
+        <!-- Si es una protectora quien se registra, mostraremos los campos de nombre, IBAN y provincia y los pondremos como obligatorios-->
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8">
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input 
+                            class="form-check-input" 
+                            type="checkbox"
+                            formControlName="prote"
+                      > Darme de alta como protectora.
+                    </label> 
+                </div>
+            </div>
+        </div>
+
+        <div [class.d-none]="!isProte"> <!--Si no es protectora ocultamos estos campos-->
+            <div class="form-group row justify-content-center">
+                <div class="col-10 col-md-8" >
+                    <input 
+                        class="form-control"
+                        type="text"
+                        placeholder="Nombre protectora"
+                        formControlName="name"
+                        [class.is-invalid]="invalidName"
+                    >
+                    <small *ngIf="invalidName" class="text-danger">
+                        Debe escribir al menos 3 letras
+                    </small>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <div class="col-10 col-md-8" >
+                    <input 
+                        class="form-control"
+                        type="text"
+                        placeholder="Número de cuenta (IBAN)"
+                        formControlName="bankAccount"
+                        [class.is-invalid]="invalidBankAccount"
+                    >
+                    <small *ngIf="invalidBankAccount" class="text-danger"> 
+                        Escriba un número de cuenta válido
+                    </small>
+                </div>    
+            </div>  
+
+            <div class="form-group row justify-content-center">  
+                <div class="col-10 col-md-8" >
+                    <select 
+                        class="form-control"
+                        type="select"
+                        [(ngModel)]="provinceSelected"
+                        formControlName="province"
+                        [class.is-invalid]="invalidProvince"
+                    >
+                        <option [value]="provinceSelected" selected hidden>Selecciona la provincia</option>
+                        <option  value="Alicante">Alicante</option>
+                        <option  value="Almeria">Almería</option>
+                    </select>
+                    <small *ngIf="invalidProvince" class="text-danger"> 
+                        Seleccione una provincia
+                    </small>
+                </div>    
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center d-none">
+            <div class="col-10 col-md-8">
+                <input
+                    class= "form-control"
+                    type= "text"
+                    formControlName="honeyPot"
+                    [class.is-invalid]="invalidHoneyPot"
+                >
+            </div>
+        </div>
+
+        <small class=" d-flex flex-row justify-content-center">
+            <p class="col-10 col-md-8 pl-1 text-justify">Al registrarte en esta web, declaras haber leído y aceptado nuestra <a href="#">política de privacidad</a>. No nos gusta el spam, por lo que tus datos personales se utilizarán para que puedas gestionar el acceso a tu cuenta, procesar tu pedido y otros propósitos comerciales de los que podrás darte de baja cuando quieras escribiendo a info@guaubisabi.com o desde los propios emails.</p>
+        </small>
+
+        <div class="form-group row justify-content-center">
+            <div class="input-group col-10 col-md-8">
+                <button 
+                    type="submit" 
+                    class="btn btn-outline-dark button"
+                >Registrarme
+                </button>
+            </div>
+        </div>
+    </form>
+    
+</section>

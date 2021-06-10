@@ -1,0 +1,126 @@
+<section class="container-fluid">
+
+    <div class="row mb-5">
+        <div class="col text-center">
+            <fa-icon [icon]="iconMarker" size="2x" [fixedWidth]="true"></fa-icon>
+            <p class="small">LOCALIZACIÓN</p>
+            <p>Barcelona</p>
+        </div>
+        <div class="col text-center">
+            <a class="link" href="https://api.whatsapp.com/send?phone=+34644057800" target="blank">
+                <fa-icon [icon]="iconPhoneSquare" size="2x" [fixedWidth]="true"></fa-icon>
+                <p class="small">LLÁMANOS</p>
+                <p>+34 644 057 800</p>
+            </a>
+        </div>
+        <div class="col text-center">
+            <a class="link" href="mailto:info@guaubisabi.com?subject=Información">
+                <fa-icon [icon]="iconMailSquare" size="2x" [fixedWidth]="true"></fa-icon>
+                <p class="small">ESCRÍBENOS</p>
+                <p>info@guaubisabi.com</p>     
+            </a>
+        </div>
+    </div>
+
+    
+        <div class="col d-flex flex-column texto"> 
+            <h2 class="text-center">¿TIENES ALGUNA DUDA? CONTÁCTANOS</h2>
+            <p>Si tienes dudas sobre algún producto, necesitas consejo sobre cómo personalizar tu handmade, eres protectora o asociación y necesitas que te echemos un cable, has adoptado a un peludo "especial" y quieres que el mundo conozca vuestra historia o simplemente, tienes cualquier sugerencia, no dudes en contactarme. Estaré encantada de echarte una mano en todo lo que pueda.</p>
+        </div>
+   
+
+    <form autocomplete="off" class ="d-flex flex-column" [formGroup]= "formContact" (ngSubmit)="enviar()">
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8">
+                <input
+                    class= "form-control"
+                    type= "text"
+                    placeholder = "Nombre"
+                    [(ngModel)]="nameSelected"
+                    formControlName="name"
+                    [class.is-invalid]="invalidName"
+                >
+                <small *ngIf="invalidName" class="text-danger">
+                    Ingrese al menos 3 letras
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8">
+                <input class="form-control"
+                   type="text"
+                   placeholder="Correo electrónico"
+                   [(ngModel)]="mailSelected"
+                   formControlName="mail"
+                   [class.is-invalid]="invalidMail"
+                >
+            <small *ngIf="invalidMail" class="text-danger">
+                Ingrese un email válido
+            </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8">
+                <select 
+                    class="form-control"
+                    type="select"
+                    [(ngModel)]="subjectSelected"
+                    formControlName="subject"
+                    [class.is-invalid]="invalidSubject"
+                >
+                    <option [value]="subjectSelected" selected hidden>Selecciona una opción</option>
+                    <option  value="Soy tienda y quiero vender tus productos">Tengo una tienda y me gustaría ofrecer vuestros productos</option>
+                    <option  value="Colaboración con protes">Colaboración solidaria con protectoras</option>
+                    <option  value="Conoce nuestra historia">Me gustaría contar nuestra historia</option>
+                    <option  value="Personalización producto">Personalización producto</option>
+                    <option  value="Información">Información</option>
+                    <option  value="Incidencia">Incidencia</option>
+                    <option  value="Otros">Otros</option>
+                </select>
+                <small *ngIf="invalidSubject" class="text-danger">
+                    Elija una opción
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-10 col-md-8">
+                <textarea class="form-control"
+                          rows = 4;
+                          placeholder="Escriba el motivo de su consulta"
+                          [(ngModel)]="commentSelected"
+                          formControlName="comment"
+                          [class.is-invalid]="invalidComment"
+                          >
+                </textarea>
+                <small *ngIf="invalidComment" class="text-danger">
+                    Explique brevemente el motivo de su consulta
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center d-none">
+            <div class="col-10 col-md-8">
+                <input
+                    class= "form-control"
+                    type= "text"
+                    formControlName="honeyPot"
+                    [class.is-invalid]="invalidHoneyPot"
+                >
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="input-group col-10 col-md-8">
+                <button 
+                    type="submit" 
+                    class="btn btn-outline-dark button">Enviar
+                </button>
+            </div>
+        </div>
+    </form>
+   
+</section>
+

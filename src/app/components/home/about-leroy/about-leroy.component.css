@@ -1,0 +1,57 @@
+.fondoLeroy {
+    background-image: url(../../../../assets/img/leroy_piscina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;  
+    position: relative;
+  
+} 
+
+/*Oscurecemos la imagen  */
+.fondoLeroy::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(255,255,255,.8);
+    z-index: 1;
+}
+
+.textoLeroy {
+    margin: 0 auto;
+    color:black;
+    position: relative;
+    z-index:100;
+    width: 60%;
+    text-align: justify;
+}
+
+h3 { 
+    text-align: center;
+    padding-top: 20%;
+}
+
+.btnApp{
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-family: monserrat;
+    padding: .375rem .75rem;
+    font-weight: 600;
+    margin: 0 auto;
+    border: 2px solid black;
+    transition:.75s ease; 
+}
+ 
+.btnApp:hover{
+    background-color: rgba(0,0,0,0.9);
+    color: rgba(255,255,255);
+    transition:.75s ease; 
+}
+
+.diplay-none {
+    display: none;
+    transition:.75s ease; 
+}

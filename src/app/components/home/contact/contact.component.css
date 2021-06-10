@@ -1,0 +1,37 @@
+.button:hover {
+    background-color: rgba(0,0,0,0.9);  
+    transition:.75s ease; 
+
+}
+.small{
+    font-family: montserrat;
+    font-weight: 600;
+    margin-bottom: .25rem;/*Equivale a un mb-1 de BS4*/
+}     
+
+a {
+    color:rgba(0,0,0);
+    text-decoration: none;
+    transition:0.3s ease;
+}
+
+a:hover {
+   color:rgb(205,184,3);
+   transition:0.3s ease; 
+}
+
+.texto {
+    width: 70rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;/*Equivale a un mb-5 de BS4*/
+}
+
+.texto h2 {
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    margin: 0 auto;
+    margin-bottom: 0.5rem;/*Equivale a un mb-1 de BS4*/
+}
+
+.texto p {
+    text-align: justify;
+}

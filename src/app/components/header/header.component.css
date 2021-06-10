@@ -1,0 +1,54 @@
+header {    
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;  
+    background-color:rgb(205,184,3);
+    padding:.5rem 0rem;  
+    z-index: 200;
+}
+
+header a {
+    font-family: 'hot & back tea';
+    color: rgba(0,0,0);
+    text-decoration: none;
+    font-size:1.3rem;   
+    letter-spacing:2px;
+}
+
+@media (max-width: 575px) { 
+    header a{
+        font-size:1.2rem;  
+    }
+} 
+
+.logo {
+    width: 2.5rem;
+}
+
+.cambio {
+    transition:0.75s ease;
+}
+
+.cambio.scrolled {
+    background-color: rgba(0,0,0,0.8);
+    transition:.75s ease; 
+    color: rgba(255,255,255);
+    padding-bottom:0px;
+}
+
+.cambio.scrolled a {
+    color: rgba(255,255,255);
+    font-size:1.1rem;  
+
+}
+.cambio.scrolled .text {
+    border-bottom: 1px solid white;
+}
+
+.cambio.scrolled .logo {
+    display: none;
+}

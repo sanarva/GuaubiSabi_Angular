@@ -1,0 +1,75 @@
+<footer class="container-fluid">
+     
+    <div class="row social">
+       <div class="col">
+           <a id="iconIG"  href="https://www.instagram.com/guaubisabi/"                   target="blank"><fa-icon [icon]="iconInstagram" size="lg"></fa-icon></a>
+           <a id="iconFb1" href="https://www.facebook.com/profile.php?id=100016952952158" target="blank"><fa-icon [icon]="iconFacebookF" size="lg"></fa-icon></a>
+           <a id="iconFb2" href="https://www.facebook.com/Guaubi-Sabi-239760086790656"    target="blank"><fa-icon [icon]="iconFacebook"  size="lg"></fa-icon></a>
+       </div>
+    </div>
+  
+    <div class="row information d-flex justify-content-center">
+        <div class="col-6 col-lg-3 info infoGuaubi d-flex flex-column flex-wrap align-content-center">
+             <div class="d-flex">
+                <a [routerLink]="['Quienes-somos']">Quienes somos</a>
+            </div>
+
+            <div class="d-flex">
+                <a [routerLink]="['Preguntas-frecuentes']">Preguntas frecuentes</a>
+            </div>
+
+            <div class="d-flex">
+                <a  [routerLink]="['Tiendas-colaboradoras']">Tiendas colaboradoras</a>
+            </div>
+
+            <div class="d-flex">
+                <a [routerLink]="['Cuidado-productos']">Cuidado de los productos</a>
+            </div>
+        </div>
+   
+
+        <div class="col-6 col-lg-3 info infoCompra d-flex flex-column flex-wrap align-content-center">
+            <div class="d-flex">
+                <a [routerLink]="['Envios']">Envíos</a>
+            </div>
+            <div class="d-flex">
+                <a [routerLink]="['Como-comprar']">Cómo comprar</a>
+            </div>
+            <div class="d-flex">
+                <a [routerLink]="['Metodos-pago']">Métodos de pago</a>
+            </div>
+            <div class="d-flex">
+                <a [routerLink]="['Cambios-devoluciones']">Cambios y devoluciones</a>
+            </div>
+        </div>
+ 
+        <div class="col-12  col-lg-3 info d-flex flex-column flex-wrap align-content-center">
+            <div class="d-flex">
+                <fa-icon [icon]="iconWhatsapp" size="md" [fixedWidth]="true"></fa-icon>
+                <a class="link" href="https://api.whatsapp.com/send?phone=+34644057800" target="blank">Envíanos un WhatsApp</a>
+            </div>
+            <div class="d-flex">
+                <fa-icon [icon]="iconPhone" size="md" [fixedWidth]="true"></fa-icon>
+                <p>644 057 800</p>
+            </div>
+            <div class="d-flex">
+                <fa-icon [icon]="iconMail" size="md" [fixedWidth]="true"></fa-icon>
+                <a class="link" href="mailto:info@guaubisabi.com?subject=Información">info@guaubisabi.com</a>
+            </div>
+            <div class="d-flex">
+                <fa-icon [icon]="iconCalendar" size="md" [fixedWidth]="true"></fa-icon>
+                <p>Lunes a Viernes 9:00-18:00h</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row copyright">
+        <div class="col-md-6 text-lg-left text-center" >
+            <p class="mb-0">© {{ fecha | date:'y' }} Guaubi Sabi</p> <!--Utilizo este pipe para sacar el año-->
+        </div>
+        <div class="col-md-6 text-md-right text-center"> 
+            <p class="mb-0"> App web hecha con <fa-icon [icon]="iconHeart" size="sm" [fixedWidth]="true" [styles]="{'color':'#c07db4'}"></fa-icon> por Guaubi Sabi</p>
+        </div>
+    </div>
+    
+</footer>

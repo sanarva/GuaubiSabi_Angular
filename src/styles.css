@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+/*Estas serás las fuestas que usará la app*/
+
+/*Montserrat para la barra de navegación*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800;900&display=swap');
+
+/*Caviar dreams para los textos*/
+@font-face {
+    font-family: "Caviar dreams";
+    src: url(assets/font/caviar_dreams/CaviarDreams.ttf) format("opentype");
+}
+
+/*Black & tea para decorar algunos títulos */
+@font-face {
+    font-family: 'hot & back tea';
+    src: url(assets/font/hot_and_black_tea/Hot&BlackTea.ttf) format("opentype");
+}
+
+/*Reseteamos el padding y margin y establezco la fuente principal*/
+html, body, p, a, div, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-family:  "Caviar dreams";
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Monserrat';
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem; /*Hago que los títulos h1 tengan el mismo tamaño que los h2*/
+}
+
+p{
+    padding-bottom: 1rem;
+}
+
+
+li {
+    padding-bottom: 0.75rem;
+    padding-left: 3rem;
+    list-style-type: none;
+}
+
+img, fieldset { 
+    border: 0; 
+}
+
+.container, .container-fluid {
+    padding-top: 4rem;
+}
+

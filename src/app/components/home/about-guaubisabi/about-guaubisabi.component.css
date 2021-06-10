@@ -1,0 +1,44 @@
+.zoom img {
+  background-color: rgba(255,255,255);
+  width: 100%;
+  overflow:hidden;
+  animation-name: zoom;
+  animation-duration: 10s;  
+  animation-timing-function:linear; 
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoom {
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+  } 
+}
+ 
+.texto {
+  position: absolute;
+  top: 15vw;
+  right: 4vw;
+  width: 30vw;
+  font-size: 1.5vw;
+}
+
+.texto img {
+  width: 15vw;
+  display: block;
+  margin: 0 auto;
+}
+
+p {
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
+  text-align: justify;   
+}
+
+@media (max-width: 991px){
+  p {
+      font-size:2vw;
+  }
+}
+
+

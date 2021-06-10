@@ -1,0 +1,25 @@
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+} 
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgb(205,184,3);
+}
+
+.navButton{
+    color:rgb(205,184,3);
+   
+}
+
+.cambio {
+    transition:0.75s ease;
+}
+.cambio.scrolled{
+
+    background-color: rgba(0,0,0,0.8);
+    transition:.75s ease;    
+} 

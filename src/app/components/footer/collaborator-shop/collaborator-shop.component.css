@@ -1,0 +1,10 @@
+#shopsMap {
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+/*Modifico esta clase de los estilos de Leaflet para centrar el texto en lugar de que aparezca alineado a la izda*/
+.leaflet-popup-content-wrapper {
+    text-align: center;
+}

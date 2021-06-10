@@ -1,0 +1,33 @@
+<section class="container-fluid pb-5 fondoLeroy">
+    <div class="textoLeroy">
+        <h3>LA HISTORIA DE LEROY COMO INSPIRACIÓN PARA AYUDAR A OTROS PELUDOS</h3> 
+
+        <p> Aun con matices agridulces, esta es una historia con <b>final feliz</b> porque  él <b>no es cojo, es cojonudo ❤</b></p>
+
+        <p *ngIf="ocultar"> Os hablo de <b>Leroy</b>, mi perro, que <b>fue atropellado</b> siendo tan solo un <b>cachorro</b>, por su anterior propietario, un cazador sin corazón. El accidente provocó que sus patitas traseras sufrieron un buen destrozo. A pesar de los esfuerzos de los veterinarios...</p>
+        
+        <div [ngClass]="{'d-none':ocultar}">  
+            <p>Os hablo de <b>Leroy</b>, mi perro, que <b>fue atropellado</b> siendo tan solo un <b>cachorro</b>, por su anterior propietario, un cazador sin escrúpulos. El accidente provocó que sus patitas traseras sufrieron un buen destrozo.</p> 
+
+            <p>A pesar de los esfuerzos de los veterinarios, quienes se hicieron cargo de todas las operaciones, y de su custodia hasta encontrarle familia, puesto que este pequeñajo ya no servía para cazar, a Leroy <b>le quedaron muchas secuelas del accidente</b>, entre ellas, un déficit propioceptivo y artrosis severa en una de las rodillas, que hacen que no pueda mover bien las patitas de atrás.</p>
+
+            <p>Pero <b> Leroy no tiene limitaciones, ni se compadece de su situación, porque eso son cosas de humanos. Él vive la vida plenamente, con intensidad, feliz. Come como si no hubiera un mañana, duerme como una marmota, le encanta jugar, su colita se mueve a más de diez mil revoluciones cuando te ve entrar por la puerta</b>.</p>
+
+            <p>Por eso, <b>cuando decidimos</b> <strong> adoptar </strong>  <b>a Leroy</b>, teníamos que estar a la altura y no solo pensamos en darle un buen hogar y una familia, sino que <b>nos comprometimos a darle la mejor calidad de vida posible</b>.</p>
+
+            <p>Así que después de visitar muchos especialistas y realizar infinidad de pruebas, llegamos a la conclusión de que la mejor manera de ayudarle a día de hoy es la fisioterapia: masajitos, piscina, acupuntura y otros tratamientos para intentar muscular sus patitas, evitar contracturas y paliar el dolor.</p>
+
+            <p>Y para poder <b>hacer frente a su tratamiento</b>, decidimos ponernos "patas a la obra" y empezamos a hacer handmade, sin ser coscientes de la <b>gran aceptación</b> que iba a tener, por lo que decidimos <strong>ayudar también a otros peludos</strong> que no han tenido tanta suerte como él.</p>
+
+            <p>Con la compra de cada cosita que hacemos a mano con tanto amor, <b>estás ayudando a mejorar la calidad de vida de Leroy, además de a los más de 300.000 animales que se abandonan en España cada año</b>, ya que el 80% del <strong> handmade solidario </strong> es destinado a la fisioterapia que necesita Leroy y el 20% a la prote, asociación o rescatista que tú elijas</p>
+
+            <p><b>¿Nos ayudas a ayudar?</b></p>
+        </div>
+        <div class="d-flex"> 
+            <button (click)='ocultar = !ocultar' class="btnApp" *ngIf="ocultar; else mostrar">Leer más</button>
+            <ng-template #mostrar><button (click)='ocultar = !ocultar' class="btnApp" >Ocultar historia</button></ng-template>
+        </div>
+    </div>
+</section>
+
+
